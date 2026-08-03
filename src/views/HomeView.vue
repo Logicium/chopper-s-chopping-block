@@ -1,0 +1,89 @@
+<script setup lang="ts">
+import { computed } from 'vue'
+import { siteConfig } from '../config/site.config'
+import { variantAtLeast } from '@apotome/archetype-shared/themes/tokens'
+import { useSiteContentStore } from '@apotome/archetype-shared/platform/siteContentStore'
+import { useSiteTheme } from '@apotome/archetype-shared/composables/useSiteTheme'
+import HeroSection from '@apotome/archetype-shared/components/sections/HeroSection.vue'
+import DispatchBar from '../components/sections/DispatchBar.vue'
+import ServicesSection from '../components/sections/ServicesSection.vue'
+import CapabilitiesSection from '../components/sections/CapabilitiesSection.vue'
+import AboutSection from '@apotome/archetype-shared/components/sections/AboutSection.vue'
+import ProjectsSection from '../components/sections/ProjectsSection.vue'
+import HoursSection from '@apotome/archetype-shared/components/sections/HoursSection.vue'
+import TestimonialsSection from '@apotome/archetype-shared/components/sections/TestimonialsSection.vue'
+
+const { variant: liveVariant } = useSiteTheme()
+const isPortfolio = computed(() => variantAtLeast(liveVariant.value, 'portfolio'))
+const content = useSiteContentStore()
+const reviewItems = computed(() =>
+  content.reviewsSource === 'google' && content.googleReviews.length
+    ? content.googleReviews
+    : siteConfig.testimonials,
+)
+</script>
+
+<template>
+  <HeroSection
+    :eyebrow="siteConfig.tagline"
+    title="Tools down. Job done."
+    :subtitle="siteConfig.blurb"
+    :image="siteConfig.photos.hero.src"
+    :image-alt="siteConfig.photos.hero.alt"
+    :images="isPortfolio ? [siteConfig.photos.hero, ...siteConfig.photos.gallery.slice(0, 3)] : []"
+    :cta-primary="{ label: 'See services', to: '/services' }"
+    :cta-secondary="{ label: 'Get a quote', to: '/contact' }"
+    layout="split"
+  />
+
+  <DispatchBar
+    :phone="siteConfig.dispatch.phone"
+    :emergency="siteConfig.dispatch.emergency"
+    :emergency-phone="siteConfig.dispatch.emergencyPhone"
+    :service-area="siteConfig.dispatch.serviceArea"
+  />
+
+  <ServicesSection
+    eyebrow="What we do"
+    title="Services & rates"
+    :intro="siteConfig.services.intro"
+    :categories="siteConfig.services.categories"
+    :quote-cta="siteConfig.services.quoteCta"
+  />
+
+  <CapabilitiesSection
+    eyebrow="On paper"
+    title="Capabilities"
+    :intro="siteConfig.capabilities.intro"
+    :items="siteConfig.capabilities.items"
+  />
+
+  <AboutSection
+    eyebrow="The shop"
+    :title="siteConfig.story.title"
+    :paragraphs="siteConfig.story.paragraphs"
+    :image="siteConfig.photos.about.src"
+    :image-alt="siteConfig.photos.about.alt"
+    :facts="siteConfig.story.facts"
+  />
+
+  <ProjectsSection
+    eyebrow="Recent work"
+    title="From the yard"
+    :intro="siteConfig.projects.intro"
+    :items="siteConfig.projects.items"
+  />
+
+  <HoursSection
+    eyebrow="When we're open"
+    title="Shop hours"
+    :hours="siteConfig.hours"
+    note="After-hours dispatch available for fleet contracts."
+  />
+
+  <TestimonialsSection
+    eyebrow="Word from the lot"
+    title="What customers say"
+    :items="reviewItems"
+  />
+</template>
