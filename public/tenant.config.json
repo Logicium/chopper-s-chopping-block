@@ -1,34 +1,159 @@
 {
-  "_note": "This file is overwritten by the Apotome provisioning service during site generation. Edit your live content from /admin.",
+  "_generated": "2026-08-03T02:38:48.548Z",
   "archetype": "keystone",
-  "brand": "Keystone Services",
-  "tagline": "Expert Service, Local Trust",
-  "blurb": "Professional services built on decades of community relationships.",
-  "theme": "earth",
-  "swatch": "default",
-  "variant": "classic",
+  "brand": "Chopper's Chopping Block",
+  "tagline": "Precision cuts, custom creations.",
+  "blurb": "Custom Built Hot dog stands",
+  "theme": "atlas",
+  "swatch": "lagoon-dark",
+  "variant": "essentials",
   "contact": {
-    "address": "100 Commercial St, Trinidad, CO 81082",
-    "phone": "(719) 555-0400",
-    "email": "info@example.com",
+    "address": "123 Fake Street",
+    "phone": "9407651403",
+    "email": "zackleejohnston@gmail.com",
     "mapEmbedUrl": ""
   },
-  "hours": [
-    { "day": "Mon–Fri", "open": "8am – 5pm" },
-    { "day": "Saturday", "open": "9am – 2pm" },
-    { "day": "Sunday", "open": "Closed" }
+  "story": {
+    "title": "The CHOPS",
+    "paragraphs": [
+      "Dingo's ate my baby",
+      ""
+    ],
+    "facts": [
+      {
+        "label": "Founded",
+        "value": "2019"
+      },
+      {
+        "label": "Summoned",
+        "value": "2021"
+      },
+      {
+        "label": "",
+        "value": ""
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "Best prices on stolen good!",
+      "author": "Dave R. ",
+      "source": "Somewhere in CO"
+    },
+    {
+      "quote": "Ready for mustard and ketchup!",
+      "author": "Marty T.",
+      "source": "allegedly still there"
+    },
+    {
+      "quote": "Shady parts from shady people.",
+      "author": "Kevin B. ",
+      "source": "reformed"
+    }
+  ],
+  "social": [
+    {
+      "label": "Instagram",
+      "href": "https://www.instagram.com/choppermountain/"
+    },
+    {
+      "label": "Facebook",
+      "href": ""
+    }
   ],
   "photos": {
-    "hero": { "src": "/images/hero.jpg", "alt": "Business exterior" },
-    "about": { "src": "/images/about.jpg", "alt": "Team at work" },
-    "gallery": []
+    "hero": {
+      "src": "/photos/hero.jpg",
+      "alt": "",
+      "caption": ""
+    },
+    "about": {
+      "src": "/photos/about.jpg",
+      "alt": "",
+      "caption": ""
+    },
+    "gallery": [
+      {
+        "src": "/photos/gallery-01.jpg",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "src": "/photos/gallery-02.jpg",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "src": "/photos/gallery-03.jpg",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "src": "/photos/gallery-04.jpg",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "src": "/photos/gallery-05.jpg",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "src": "/photos/gallery-06.jpg",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "src": "/photos/gallery-07.jpg",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "src": "/photos/gallery-08.jpg",
+        "alt": "",
+        "caption": ""
+      }
+    ]
   },
-  "story": {
-    "title": "Our Story",
-    "paragraphs": ["Serving our community with expertise and integrity."],
-    "facts": []
-  },
-  "services": [],
-  "testimonials": [],
-  "social": []
+  "emergencyAvailable": false,
+  "services": [
+    {
+      "name": "Custom HOT DOG stands",
+      "description": "Stainless steel diamond plated goodness",
+      "price": "Starting at $2500",
+      "icon": "Antenna"
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": "",
+      "icon": "⚙"
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": "",
+      "icon": "🛠"
+    },
+    {
+      "name": "",
+      "description": "",
+      "price": "",
+      "icon": "⚡"
+    }
+  ],
+  "capabilities": [
+    {
+      "label": "Years in business",
+      "value": ""
+    },
+    {
+      "label": "Service radius",
+      "value": ""
+    },
+    {
+      "label": "Licensed & insured",
+      "value": ""
+    }
+  ]
 }
